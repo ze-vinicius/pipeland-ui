@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import styled from "styled-components/native";
+import styled from 'styled-components/native';
 import {
   SpaceProps,
   space,
@@ -12,7 +12,7 @@ import {
   border,
   ShadowProps,
   shadow,
-} from "styled-system";
+} from 'styled-system';
 
 type StyledBoxProps = SpaceProps &
   BackgroundColorProps &
