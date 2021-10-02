@@ -1,5 +1,5 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "lib/commonjs/index.js",
   "name": "pipeland-ui",
   "version": "0.0.2",
   "description": "A simple React Native UI Library",
@@ -23,7 +23,15 @@
     "prestorybook": "rnstl",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
-    "lint": "eslint --ext .tsx --ext .ts src/"
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "prepare": "bob build",
+    "semantic-release": "semantic-release"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
@@ -38,6 +46,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@react-native-community/bob": "^0.17.1",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
@@ -52,6 +63,8 @@
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -61,8 +74,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
     "prettier": "^2.4.1",
     "react-native-storybook-loader": "^2.0.4",
+    "semantic-release": "^18.0.0",
     "typescript": "~4.0.0"
   },
   "config": {
@@ -72,10 +87,36 @@
       ],
       "pattern": "**/*.stories.tsx",
       "outputFile": "./storybook/storyLoader.js"
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "private": false,
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "react-native": "src/components/index.ts",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/src/components/index.d.ts",
+  "files": [
+    "src/components",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "@react-native-community/bob": {
+    "source": "src/components",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }
