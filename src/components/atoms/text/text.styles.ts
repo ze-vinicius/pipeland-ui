@@ -1,23 +1,10 @@
 import styled from 'styled-components/native';
-import {
-  TypographyProps,
-  typography,
-  color,
-  ColorProps,
-  SpaceProps,
-  space,
-} from 'styled-system';
+import { typography, color, space } from 'styled-system';
+import { TextStyleProps } from './text.props';
 
-import { variants, TextVariants } from './text.variants';
+import { variants } from './text.variants';
 
-export interface StyledTextProps
-  extends TypographyProps,
-    ColorProps,
-    SpaceProps {
-  variant?: TextVariants;
-}
-
-const Text = styled.Text<StyledTextProps>`
+const Text = styled.Text<TextStyleProps>`
   ${({ variant }) => variants[variant || 'body1']};
   ${color};
   ${typography};

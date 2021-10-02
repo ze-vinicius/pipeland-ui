@@ -1,0 +1,20 @@
+{
+  "React Native Typescript Functional Component": {
+    "prefix": "prnfc",
+    "body": [
+      "import React from 'react';",
+      "import { View } from 'react-native';",
+      "",
+      "// import * as S from './${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}.styles';",
+      "// import { ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}Props } from './${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}.props';",
+      "",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {",
+      "",
+      "  return (<View></View>);",
+      "}",
+      "",
+      "export { ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} };"
+    ],
+    "description": "Create React Native TypeScript Functional Component."
+  }
+}

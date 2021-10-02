@@ -1,0 +1,18 @@
+{
+  "Storybook Story": {
+    "prefix": "pstory",
+    "body": [
+      "import React from 'react';",
+      "import { storiesOf } from '@storybook/react-native';",
+      "",
+      "import { CenterView } from '../../../../storybook/stories/CenterView';",
+      "import { ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} } from './${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}';",
+      "",
+      "storiesOf('${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}', module)",
+      ".addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)",
+      ".add('', () => <${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}></${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}>",
+      ");"
+    ],
+    "description": "Generate a simple storybook story."
+  }
+}

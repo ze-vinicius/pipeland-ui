@@ -16,6 +16,7 @@ const colors = {
   cyan: palette.cyans[5],
   purple: palette.purples[5],
   pink: palette.pinks[5],
+  primary: palette.blues[5],
   main: palette.grays[9],
   error: palette.reds[5],
   ...palette,

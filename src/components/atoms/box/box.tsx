@@ -1,37 +1,9 @@
 import React from 'react';
-
-import styled from 'styled-components/native';
-import {
-  SpaceProps,
-  space,
-  BackgroundColorProps,
-  backgroundColor,
-  LayoutProps,
-  layout,
-  BorderProps,
-  border,
-  ShadowProps,
-  shadow,
-} from 'styled-system';
-
-type StyledBoxProps = SpaceProps &
-  BackgroundColorProps &
-  LayoutProps &
-  BorderProps &
-  ShadowProps;
-
-const StyledBox = styled.View<StyledBoxProps>`
-  ${space}
-  ${backgroundColor}
-  ${layout}
-  ${border}
-  ${shadow}
-`;
-
-type BoxProps = StyledBoxProps;
+import { BoxProps } from './box.props';
+import * as S from './box.styles';
 
 const Box: React.FC<BoxProps> = ({ children, ...styleProps }) => (
-  <StyledBox {...styleProps}>{children}</StyledBox>
+  <S.Box {...styleProps}>{children}</S.Box>
 );
 
 export { Box };
