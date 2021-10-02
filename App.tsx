@@ -1,7 +1,7 @@
 // App.tsx
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
+import { theme } from "./src/theme";
 
 import Storybook from "./storybook";
 

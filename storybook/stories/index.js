@@ -1,1 +1,1 @@
-import "../../components";
+import "./CenterView/index";

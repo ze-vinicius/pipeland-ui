@@ -1,3 +1,5 @@
+import React from "react";
+
 import styled from "styled-components/native";
 import {
   SpaceProps,
@@ -28,8 +30,8 @@ const StyledBox = styled.View<StyledBoxProps>`
 
 type BoxProps = StyledBoxProps;
 
-const Box: React.FC<BoxProps> = ({ children }) => (
-  <StyledBox>{children}</StyledBox>
+const Box: React.FC<BoxProps> = ({ children, ...styleProps }) => (
+  <StyledBox {...styleProps}>{children}</StyledBox>
 );
 
 export { Box };
