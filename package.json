@@ -33,6 +33,25 @@
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "lib/**/*.{js,ts}",
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
+      }
+    ]
+  },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.15.0",
     "expo": "~42.0.1",
@@ -49,6 +68,8 @@
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@react-native-community/bob": "^0.17.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
     "@storybook/addon-actions": "^5.3",
     "@storybook/addon-knobs": "^5.3",
     "@storybook/addon-links": "^5.3",
@@ -107,7 +128,7 @@
     "!**/__mocks__"
   ],
   "@react-native-community/bob": {
-    "source": "src/components",
+    "source": "src",
     "output": "lib",
     "targets": [
       "commonjs",
