@@ -6,10 +6,10 @@ jobs:
     steps:
       - name: Begin CI...
         uses: actions/checkout@v2
-      - name: Use Node 12
+      - name: Use Node 14
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 14.x
       - name: Use cached node_modules
         uses: actions/cache@v1
         with:
@@ -29,10 +29,10 @@ jobs:
 #         run: yarn test --ci --coverage --maxWorkers=2
 #         env:
 #           CI: true
-      - name: Build
-        run: yarn build
-        env:
-          CI: true
+#       - name: Build
+#         run: yarn build
+#         env:
+#           CI: true
       - name: Semantic Release
         run: yarn semantic-release
         env:
