@@ -122,11 +122,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "react-native": "src/components/index.ts",
+  "react-native": "src/index.ts",
   "module": "lib/module/index.js",
-  "types": "lib/typescript/src/components/index.d.ts",
+  "types": "lib/typescript/src/index.d.ts",
   "files": [
-    "src/components",
+    "src/",
     "lib",
     "!**/__tests__",
     "!**/__fixtures__",
