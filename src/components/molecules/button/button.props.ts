@@ -16,6 +16,5 @@ export type ButtonStyleProps = LayoutProps &
 export interface ButtonProps extends ButtonStyleProps, TouchableOpacityProps {
   variant?: ButtonVariants;
   size?: ButtonSizes;
-
   textStyle?: TextStyleProps;
 }
