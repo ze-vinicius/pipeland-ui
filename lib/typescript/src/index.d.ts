@@ -5,4 +5,5 @@ export * from './theme';
 export interface ThemeProviderProps {
     theme?: ThemeType;
 }
-export declare const ThemeProvier: React.FC<ThemeProviderProps>;
+declare const ThemeProvider: React.FC<ThemeProviderProps>;
+export { ThemeProvider };
