@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components/native';
+import merge from 'lodash.merge';
+
 import { theme as defaultTheme, ThemeType } from './theme';
 
 export * from './components';
@@ -9,11 +11,11 @@ export interface ThemeProviderProps {
   theme?: ThemeType;
 }
 
-export const ThemeProvier: React.FC<ThemeProviderProps> = ({
+const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children,
   theme = {},
 }) => {
-  const overrideTheme = { ...defaultTheme, ...theme };
+  const overrideTheme = merge(defaultTheme, theme);
 
   return (
     <StyledComponentsThemeProvider theme={overrideTheme}>
@@ -21,3 +23,5 @@ export const ThemeProvier: React.FC<ThemeProviderProps> = ({
     </StyledComponentsThemeProvider>
   );
 };
+
+export { ThemeProvider };

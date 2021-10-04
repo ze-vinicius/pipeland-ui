@@ -4,9 +4,11 @@ import {
   LayoutProps,
   BorderProps,
   ShadowProps,
+  FlexboxProps,
 } from 'styled-system';
 
-export type BoxStyleProps = SpaceProps &
+export type BoxStyleProps = FlexboxProps &
+  SpaceProps &
   BackgroundColorProps &
   LayoutProps &
   BorderProps &
