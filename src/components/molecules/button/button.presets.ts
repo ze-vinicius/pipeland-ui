@@ -1,15 +1,19 @@
+const borderBaseStyle = {
+  borderRadius: '4px',
+};
+
 export const buttonSizes = {
   small: {
+    ...borderBaseStyle,
     p: 1,
-    borderRadius: '4px',
   },
   medium: {
+    ...borderBaseStyle,
     p: 2,
-    borderRadius: '4px',
   },
   large: {
+    ...borderBaseStyle,
     p: 3,
-    borderRadius: '4px',
   },
 };
 
