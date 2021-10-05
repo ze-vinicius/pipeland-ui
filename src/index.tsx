@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components/native';
 
-import merge from 'lodash.merge';
 import { theme as defaultTheme, ThemeType } from './theme';
+import { merge } from './utils';
 
 export * from './components';
 export * from './theme';
