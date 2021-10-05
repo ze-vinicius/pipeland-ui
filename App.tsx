@@ -1,12 +1,11 @@
 // App.tsx
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { theme } from './src/theme';
+import { ThemeProvider } from './src';
 
 import Storybook from './storybook';
 
 const App: React.FC = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <Storybook />
   </ThemeProvider>
 );

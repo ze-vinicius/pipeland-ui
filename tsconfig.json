@@ -3,7 +3,10 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "resolveJsonModule": true
@@ -17,5 +20,6 @@
     "**/*.test.[tj]sx",
     "App.test.tsx",
     "App.tsx"
-  ]
+  ],
+  "extends": "expo/tsconfig.base"
 }

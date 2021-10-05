@@ -1,5 +1,5 @@
 {
-  "main": "lib/commonjs/index.js",
+  "main": "node_modules/expo/AppEntry.js",
   "name": "pipeland-ui",
   "description": "A simple React Native UI Library",
   "repository": {
@@ -24,7 +24,8 @@
     "build-storybook": "build-storybook",
     "lint": "eslint --ext .tsx --ext .ts src/",
     "prepare": "bob build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "adb:reverse-tcp": "adb reverse tcp:7007 tcp:7007"
   },
   "husky": {
     "hooks": {
