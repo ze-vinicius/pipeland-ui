@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/saraivavini/pipeland-ui/compare/v1.0.1...v1.0.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* fix lib input file ([fce277c](https://github.com/saraivavini/pipeland-ui/commit/fce277c043c14ce2eaae07ddcf372c66e77fc1fd))
+
 ## [1.0.1](https://github.com/saraivavini/pipeland-ui/compare/v1.0.0...v1.0.1) (2021-10-04)
 
 
