@@ -19,7 +19,6 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const textStyleProps: TextStyleProps = {
-    variant: 'button',
     textAlign: 'center',
     ...textVariants[variant],
     ...textStyle,

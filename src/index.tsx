@@ -8,7 +8,7 @@ export * from './components';
 export * from './theme';
 
 export interface ThemeProviderProps {
-  theme?: ThemeType;
+  theme?: Partial<ThemeType>;
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
