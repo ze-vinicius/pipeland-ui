@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/saraivavini/pipeland-ui/compare/v1.1.0...v1.2.0) (2021-10-05)
+
+
+### Features
+
+* add merge theme function ([1bdbf52](https://github.com/saraivavini/pipeland-ui/commit/1bdbf5246b21597bc5b4d2ba7d03e307adc866dd))
+
 # [1.1.0](https://github.com/saraivavini/pipeland-ui/compare/v1.0.3...v1.1.0) (2021-10-05)
 
 
