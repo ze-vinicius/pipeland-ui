@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/saraivavini/pipeland-ui/compare/v1.0.3...v1.1.0) (2021-10-05)
+
+
+### Bug Fixes
+
+* fix tsconfig ([e8e054b](https://github.com/saraivavini/pipeland-ui/commit/e8e054bf2a99fa6482acb6c84ac69b75a741284e))
+
+
+### Features
+
+* new release ([137c886](https://github.com/saraivavini/pipeland-ui/commit/137c88629dcda9906592bb4966faf303d4c94dc9))
+
 ## [1.0.3](https://github.com/saraivavini/pipeland-ui/compare/v1.0.2...v1.0.3) (2021-10-05)
 
 
