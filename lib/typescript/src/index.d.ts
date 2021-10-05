@@ -3,7 +3,7 @@ import { ThemeType } from './theme';
 export * from './components';
 export * from './theme';
 export interface ThemeProviderProps {
-    theme?: ThemeType;
+    theme?: Partial<ThemeType>;
 }
 declare const ThemeProvider: React.FC<ThemeProviderProps>;
 export { ThemeProvider };

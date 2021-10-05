@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/saraivavini/pipeland-ui/compare/v1.0.2...v1.0.3) (2021-10-05)
+
+
+### Bug Fixes
+
+* button and text styles and props ([a09469a](https://github.com/saraivavini/pipeland-ui/commit/a09469a197dcbf0fff53fd3607b5d65988aac25d))
+* fix react-native source file ([6f496b4](https://github.com/saraivavini/pipeland-ui/commit/6f496b4e9958d635d5c965cda01730bb16d3400d))
+* fix text style in button.tsx and make theme props optional ([1ba8926](https://github.com/saraivavini/pipeland-ui/commit/1ba8926edd48fdb344ed357a8330782c7a80382d))
+
 ## [1.0.2](https://github.com/saraivavini/pipeland-ui/compare/v1.0.1...v1.0.2) (2021-10-04)
 
 
