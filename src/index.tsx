@@ -1,14 +1,14 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components/native';
-import merge from 'lodash.merge';
 
+import merge from 'lodash.merge';
 import { theme as defaultTheme, ThemeType } from './theme';
 
 export * from './components';
 export * from './theme';
 
 export interface ThemeProviderProps {
-  theme?: Partial<ThemeType>;
+  theme?: ThemeType;
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({
