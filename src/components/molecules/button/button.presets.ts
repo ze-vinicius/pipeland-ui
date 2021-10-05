@@ -1,3 +1,6 @@
+import { TextStyleProps } from '../../atoms/text';
+import { ButtonStyleProps } from './button.props';
+
 const borderBaseStyle = {
   borderRadius: '4px',
 };
@@ -17,7 +20,7 @@ export const buttonSizes = {
   },
 };
 
-export const buttonVariants = {
+export const buttonVariants: Record<string, ButtonStyleProps> = {
   primary: {
     backgroundColor: 'primary',
   },
@@ -31,7 +34,7 @@ export const buttonVariants = {
   },
 };
 
-export const textVariants = {
+export const textVariants: Record<ButtonVariants, TextStyleProps> = {
   primary: {
     color: 'white',
   },
@@ -43,5 +46,5 @@ export const textVariants = {
   },
 };
 
-export type ButtonVariants = keyof typeof buttonVariants;
+export type ButtonVariants = 'primary' | 'ghost' | 'outline';
 export type ButtonSizes = keyof typeof buttonSizes;

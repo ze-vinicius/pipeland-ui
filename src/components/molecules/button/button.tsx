@@ -4,7 +4,7 @@ import { Text } from '../../atoms';
 import * as S from './button.styles';
 import { ButtonProps, ButtonStyleProps } from './button.props';
 import { buttonSizes, buttonVariants, textVariants } from './button.presets';
-import { TextStyleProps } from '../../atoms/text/text.props';
+import { TextProps } from '../../atoms/text/text.props';
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -18,7 +18,8 @@ const Button: React.FC<ButtonProps> = ({
     ...buttonSizes[size],
   };
 
-  const textStyleProps: TextStyleProps = {
+  const textStyleProps: TextProps = {
+    variant: 'button',
     textAlign: 'center',
     ...textVariants[variant],
     ...textStyle,
