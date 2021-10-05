@@ -5,7 +5,9 @@ import { TextVariants } from './text.presets';
 export interface TextStyleProps
   extends TypographyProps,
     ColorProps,
-    SpaceProps {}
+    SpaceProps {
+  textTransform?: 'uppercase' | 'lowercase' | 'none';
+}
 
 export interface TextProps extends TextStyleProps, ReactNativeTextProps {
   variant?: TextVariants;

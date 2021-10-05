@@ -1,46 +1,55 @@
-const baseStyle = {
+import { TextStyleProps } from './text.props';
+
+const BASE_STYLE = {
   color: 'main',
   fontSize: 2,
 };
 
-export const variants = {
+export const variants: Record<TextVariants, TextStyleProps> = {
   header: {
-    ...baseStyle,
+    ...BASE_STYLE,
     fontSize: 4,
     fontWeight: 'bold',
   },
 
   title: {
-    ...baseStyle,
+    ...BASE_STYLE,
     fontSize: 3,
     fontWeight: 'bold',
   },
 
   subtitle: {
-    ...baseStyle,
-    color: 5,
+    ...BASE_STYLE,
+    color: 'gray',
   },
 
   body1: {
-    ...baseStyle,
+    ...BASE_STYLE,
   },
 
   body2: {
-    ...baseStyle,
+    ...BASE_STYLE,
     fontSize: 1,
   },
 
   caption: {
-    ...baseStyle,
+    ...BASE_STYLE,
     fontSize: 0,
     color: 'gray',
   },
 
   button: {
-    ...baseStyle,
+    ...BASE_STYLE,
     fontWeight: 500,
     textTransform: 'uppercase',
   },
 };
 
-export type TextVariants = keyof typeof variants;
+export type TextVariants =
+  | 'header'
+  | 'title'
+  | 'subtitle'
+  | 'body1'
+  | 'body2'
+  | 'caption'
+  | 'button';

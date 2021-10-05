@@ -56,10 +56,15 @@ storiesOf('Atoms / Text', module)
     <Story>
       <UseCase title="caption">
         <Text variant="caption">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec
-          purus pulvinar metus imperdiet dictum in sit amet massa. Ut efficitur
-          mattis mi.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Text>
+      </UseCase>
+    </Story>
+  ))
+  .add('Button', () => (
+    <Story>
+      <UseCase title="button">
+        <Text variant="button">Button Text</Text>
       </UseCase>
     </Story>
   ));
